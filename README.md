@@ -16,6 +16,6 @@ Stores > Configuration > Pixie Media > Add body Class
 
 ## Screenshots
 
-![Screenshot1](https://pasteboard.co/iAMjWxuLJviw.png)
+![Screenshot1](https://gcdnb.pbrd.co/images/iAMjWxuLJviw.png?o=1)
 
-![Screenshot2](https://pasteboard.co/l3ebLe7fQfYP.png)
+![Screenshot2](https://gcdnb.pbrd.co/images/l3ebLe7fQfYP.png?o=1)
