@@ -1,0 +1,33 @@
+{
+    "name": "dominicwatts/addbodyclass",
+    "description": "Add dynamic body classes to pages - aid frontend development",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Dominic Watts",
+            "email": "dominic@pixie.agency"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "require": {
+        "magento/framework": "*",
+        "magento/module-store": "*",
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "PixieMedia\\AddBodyClass\\": ""
+        }
+    }
+}
