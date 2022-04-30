@@ -65,11 +65,10 @@ class AddToBodyClass implements ObserverInterface
         $this->pageConfig->addBodyClass($storeCode);
 
         $handles = $this->layout->getUpdate()->getHandles();
-        foreach($handles as $handle) {
+        foreach ($handles as $handle) {
             $this->pageConfig->addBodyClass(
                 str_ireplace("_", "-", $handle)
             );
         }
-        
     }
 }

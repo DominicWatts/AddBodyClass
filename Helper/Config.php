@@ -16,7 +16,7 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config extends AbstractHelper
 {
-    const CONFIG_XML_ENABLED = 'pixie/bodyclass/enabled';
+    public const CONFIG_XML_ENABLED = 'pixie/bodyclass/enabled';
 
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
