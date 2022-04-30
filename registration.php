@@ -6,4 +6,3 @@
 use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(ComponentRegistrar::MODULE, 'PixieMedia_AddBodyClass', __DIR__);
-
