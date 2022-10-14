@@ -28,3 +28,4 @@ Stores > Configuration > Pixie Media > Add body Class
   - Page (layout handle) type classes
   - Logged in/out classes
   - Optional custom class
+  - Webp class

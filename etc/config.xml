@@ -8,6 +8,7 @@
                 <handles>0</handles>
                 <login_status>0</login_status>
                 <cssclass>pixiedust</cssclass>
+                <webp>0</webp>
             </bodyclass>
         </pixie>
     </default>

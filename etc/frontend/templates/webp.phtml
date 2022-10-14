@@ -1,0 +1,19 @@
+<script>
+require(['jquery'], function($){
+    $(document).ready( function() {
+        function hasWebP() {
+            var rv = $.Deferred(), img = new Image();
+            img.onload = function() { rv.resolve(); };
+            img.onerror = function() { rv.reject(); };
+            img.src = "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=";
+            return rv.promise();
+        }
+
+        hasWebP().then(function() {
+            $('body').addClass("webp");
+        }, function() {
+            $('body').addClass("no-webp");
+        });
+    });
+});
+</script>
