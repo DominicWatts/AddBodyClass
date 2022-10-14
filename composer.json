@@ -3,7 +3,7 @@
     "description": "Add dynamic body classes to pages - aid frontend development",
     "type": "magento2-module",
     "license": "GPL-3.0",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "authors": [
         {
             "name": "Dominic Watts",
