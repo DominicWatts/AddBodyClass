@@ -58,10 +58,10 @@ class Config extends AbstractHelper
     public function getStores()
     {
         return $this->scopeConfig->isSetFlag(
-            self::CONFIG_XML_HANDLES,
+            self::CONFIG_XML_STORES,
             ScopeInterface::SCOPE_STORE
         );
-    }    
+    }
 
     /**
      * Is enabled

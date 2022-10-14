@@ -16,7 +16,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="stores" type="select" sortOrder="11" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
-                    <label>Enabled</label>
+                    <label>Website and Store Code</label>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
@@ -24,7 +24,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="handles" type="select" sortOrder="12" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
-                    <label>Enabled</label>
+                    <label>Page Type (layout handles)</label>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
@@ -32,7 +32,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="login_status" type="select" sortOrder="13" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
-                    <label>Enabled</label>
+                    <label>Logged in/out</label>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
