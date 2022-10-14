@@ -89,5 +89,5 @@ class AddToBodyClass implements ObserverInterface
                 $customClass
             );
         }
-   }
+    }
 }
