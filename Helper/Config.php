@@ -18,7 +18,7 @@ class Config extends AbstractHelper
 {
     public const CONFIG_XML_ENABLED = 'pixie/bodyclass/enabled';
     public const CONFIG_XML_CSSCLASS = 'pixie/bodyclass/cssclass';
-    
+
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
@@ -47,7 +47,7 @@ class Config extends AbstractHelper
             ScopeInterface::SCOPE_STORE
         );
     }
-        
+
     /**
      * Get css class
      * @return null|string
