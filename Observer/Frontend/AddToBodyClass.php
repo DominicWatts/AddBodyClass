@@ -76,7 +76,7 @@ class AddToBodyClass implements ObserverInterface
                 str_ireplace("_", "-", $handle)
             );
         }
-        
+
         if ($this->_session->isLoggedIn()) { 
             $this->pageConfig->addBodyClass('logged-in');
         } else {
