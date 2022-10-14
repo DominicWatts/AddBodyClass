@@ -22,8 +22,8 @@ Add dynamic body classes to pages - aid frontend development. Add website code, 
 
 Stores > Configuration > Pixie Media > Add body Class
 
-## Screenshots
+## Classes added
 
-![Screenshot1](https://gcdnb.pbrd.co/images/iAMjWxuLJviw.png?o=1)
-
-![Screenshot2](https://gcdnb.pbrd.co/images/l3ebLe7fQfYP.png?o=1)
+  - Page type classes
+  - Logged in/out classes
+  - Optional custom class
