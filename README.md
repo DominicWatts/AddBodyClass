@@ -24,6 +24,7 @@ Stores > Configuration > Pixie Media > Add body Class
 
 ## Classes added
 
-  - Page type classes
+  - Website / store classes
+  - Page (layout handle) type classes
   - Logged in/out classes
   - Optional custom class
