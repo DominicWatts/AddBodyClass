@@ -17,7 +17,8 @@ use Magento\Store\Model\ScopeInterface;
 class Config extends AbstractHelper
 {
     public const CONFIG_XML_ENABLED = 'pixie/bodyclass/enabled';
-
+    public const CONFIG_XML_CSSCLASS = 'pixie/bodyclass/cssclass';
+    
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
@@ -43,6 +44,18 @@ class Config extends AbstractHelper
     {
         return $this->scopeConfig->isSetFlag(
             self::CONFIG_XML_ENABLED,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+        
+    /**
+     * Get css class
+     * @return null|string
+     */
+    public function getBodyClass()
+    {
+        return $this->scopeConfig->getValue(
+            self::CONFIG_XML_CSSCLASS,
             ScopeInterface::SCOPE_STORE
         );
     }
