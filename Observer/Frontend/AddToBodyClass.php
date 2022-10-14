@@ -82,5 +82,12 @@ class AddToBodyClass implements ObserverInterface
         } else {
             $this->pageConfig->addBodyClass('logged-out');
         }
-    }
+        
+        $customClass = $this->helper->getBodyClass();
+        if ($customClass) {
+            $this->pageConfig->addBodyClass(
+                $customClass
+            );
+        }
+   }
 }
