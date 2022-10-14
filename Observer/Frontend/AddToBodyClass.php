@@ -16,6 +16,7 @@ use Magento\Framework\View\Result\PageFactory;
 use Magento\Setup\Module\Dependency\Parser\Code;
 use Magento\Store\Model\StoreManagerInterface;
 use PixieMedia\AddBodyClass\Helper\Config;
+use Magento\Customer\Model\Session;
 
 class AddToBodyClass implements ObserverInterface
 {
@@ -30,6 +31,9 @@ class AddToBodyClass implements ObserverInterface
 
     /** @var \Magento\Framework\View\LayoutInterface */
     protected $layout;
+    
+    /** @var \Magento\Customer\Model\Session */
+    protected $_session;
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
@@ -39,12 +43,14 @@ class AddToBodyClass implements ObserverInterface
     public function __construct(
         Context $context,
         StoreManagerInterface $storeManager,
-        Config $helper
+        Config $helper,
+        Session $customerSession
     ) {
         $this->pageConfig = $context->getPageConfig();
         $this->layout = $context->getLayout();
         $this->storeManager = $storeManager;
         $this->helper = $helper;
+        $this->_session = $customerSession;
     }
 
     /**
@@ -68,6 +74,19 @@ class AddToBodyClass implements ObserverInterface
         foreach ($handles as $handle) {
             $this->pageConfig->addBodyClass(
                 str_ireplace("_", "-", $handle)
+            );
+        }
+
+        if ($this->_session->isLoggedIn()) { 
+            $this->pageConfig->addBodyClass('logged-in');
+        } else {
+            $this->pageConfig->addBodyClass('logged-out');
+        }
+        
+        $customClass = $this->helper->getBodyClass();
+        if ($customClass) {
+            $this->pageConfig->addBodyClass(
+                $customClass
             );
         }
     }
