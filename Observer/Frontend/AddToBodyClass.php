@@ -62,23 +62,31 @@ class AddToBodyClass implements ObserverInterface
             return false;
         }
 
-        // add store codes
-        $websiteCode = $this->storeManager->getWebsite()->getCode();
-        $storeCode = $this->storeManager->getStore()->getCode();
-        $this->pageConfig->addBodyClass($websiteCode);
-        $this->pageConfig->addBodyClass($storeCode);
-
-        $handles = $this->layout->getUpdate()->getHandles();
-        foreach ($handles as $handle) {
-            $this->pageConfig->addBodyClass(
-                str_ireplace("_", "-", $handle)
-            );
+        if ($this->helper->getStores()) {
+            // add store codes
+            $websiteCode = $this->storeManager->getWebsite()->getCode();
+            $storeCode = $this->storeManager->getStore()->getCode();
+            $this->pageConfig->addBodyClass($websiteCode);
+            $this->pageConfig->addBodyClass($storeCode);
         }
 
-        if ($this->_session->isLoggedIn()) {
-            $this->pageConfig->addBodyClass('logged-in');
-        } else {
-            $this->pageConfig->addBodyClass('logged-out');
+        if ($this->helper->getHandles()) {
+            // add layout handles
+            $handles = $this->layout->getUpdate()->getHandles();
+            foreach ($handles as $handle) {
+                $this->pageConfig->addBodyClass(
+                    str_ireplace("_", "-", $handle)
+                );
+            }
+        }
+
+        // add login status
+        if ($this->helper->getLoginStatus()) {
+            if ($this->_session->isLoggedIn()) {
+                $this->pageConfig->addBodyClass('logged-in');
+            } else {
+                $this->pageConfig->addBodyClass('logged-out');
+            }
         }
 
         $customClass = $this->helper->getBodyClass();

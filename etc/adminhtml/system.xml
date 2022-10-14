@@ -15,12 +15,36 @@
                     <comment/>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="stores" type="select" sortOrder="11" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
+                    <label>Enabled</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Add Website and Store Code classes to body</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="handles" type="select" sortOrder="12" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
+                    <label>Enabled</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Add layout handles classes to body</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="login_status" type="select" sortOrder="13" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
+                    <label>Enabled</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Add logged-in / logged-out classes to body</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
                 <field id="cssclass" type="text" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
                     <label>Custom body CSS class</label>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
-                    <comment/>
+                    <comment>Add user defined class to body</comment>
                 </field>
             </group>
         </section>

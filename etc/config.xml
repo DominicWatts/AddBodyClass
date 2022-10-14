@@ -4,6 +4,9 @@
         <pixie>
             <bodyclass>
                 <enabled>0</enabled>
+                <stores>0</stores>
+                <handles>0</handles>
+                <login_status>0</login_status>
                 <cssclass>pixiedust</cssclass>
             </bodyclass>
         </pixie>
