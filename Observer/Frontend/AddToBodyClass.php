@@ -9,14 +9,12 @@ declare(strict_types=1);
 
 namespace PixieMedia\AddBodyClass\Observer\Frontend;
 
+use Magento\Customer\Model\Session;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\View\Element\Template\Context;
-use Magento\Framework\View\Result\PageFactory;
-use Magento\Setup\Module\Dependency\Parser\Code;
 use Magento\Store\Model\StoreManagerInterface;
 use PixieMedia\AddBodyClass\Helper\Config;
-use Magento\Customer\Model\Session;
 
 class AddToBodyClass implements ObserverInterface
 {
@@ -31,7 +29,7 @@ class AddToBodyClass implements ObserverInterface
 
     /** @var \Magento\Framework\View\LayoutInterface */
     protected $layout;
-    
+
     /** @var \Magento\Customer\Model\Session */
     protected $_session;
 
@@ -77,12 +75,12 @@ class AddToBodyClass implements ObserverInterface
             );
         }
 
-        if ($this->_session->isLoggedIn()) { 
+        if ($this->_session->isLoggedIn()) {
             $this->pageConfig->addBodyClass('logged-in');
         } else {
             $this->pageConfig->addBodyClass('logged-out');
         }
-        
+
         $customClass = $this->helper->getBodyClass();
         if ($customClass) {
             $this->pageConfig->addBodyClass(
