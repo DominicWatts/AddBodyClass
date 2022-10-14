@@ -17,6 +17,9 @@ use Magento\Store\Model\ScopeInterface;
 class Config extends AbstractHelper
 {
     public const CONFIG_XML_ENABLED = 'pixie/bodyclass/enabled';
+    public const CONFIG_XML_STORES = 'pixie/bodyclass/stores';
+    public const CONFIG_XML_HANDLES = 'pixie/bodyclass/handles';
+    public const CONFIG_XML_LOGIN = 'pixie/bodyclass/login_status';
     public const CONFIG_XML_CSSCLASS = 'pixie/bodyclass/cssclass';
 
     /**
@@ -44,6 +47,42 @@ class Config extends AbstractHelper
     {
         return $this->scopeConfig->isSetFlag(
             self::CONFIG_XML_ENABLED,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+
+    /**
+     * Is enabled
+     * @return bool
+     */
+    public function getStores()
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::CONFIG_XML_HANDLES,
+            ScopeInterface::SCOPE_STORE
+        );
+    }    
+
+    /**
+     * Is enabled
+     * @return bool
+     */
+    public function getHandles()
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::CONFIG_XML_HANDLES,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+
+    /**
+     * Is enabled
+     * @return bool
+     */
+    public function getLoginStatus()
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::CONFIG_XML_LOGIN,
             ScopeInterface::SCOPE_STORE
         );
     }
