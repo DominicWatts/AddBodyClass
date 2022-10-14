@@ -61,7 +61,7 @@ class Config extends AbstractHelper
             self::CONFIG_XML_HANDLES,
             ScopeInterface::SCOPE_STORE
         );
-    }    
+    }
 
     /**
      * Is enabled
