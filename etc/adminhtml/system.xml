@@ -39,6 +39,14 @@
                     <comment>Add logged-in / logged-out classes to body</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="webp" type="select" sortOrder="14" showInWebsite="1" showInStore="1" showInDefault="1" translate="label comment">
+                    <label>Webp Available</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Add webp / no-webp classes to body</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
                 <field id="cssclass" type="text" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
                     <label>Custom body CSS class</label>
                     <depends>
